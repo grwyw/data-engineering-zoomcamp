@@ -2,11 +2,10 @@
 
 Question 1. Understanding docker first run
 
-Answer:
 docker run -it --entrypoint bash python:3.12.8
 pip --version
 
-pip 24.3.1
+Answer: pip 24.3.1
 
 Question 2. Understanding Docker networking and docker-compose
 
