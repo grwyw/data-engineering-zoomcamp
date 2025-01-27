@@ -62,3 +62,11 @@ AND lpep_dropoff_datetime < '2019-11-01'::DATE
 
 Answer: 35281
 
+Question 4. Longest trip for each day
+
+SELECT MAX(trip_distance)
+FROM public.green_taxi
+WHERE lpep_pickup_datetime > '2019-10-31'::DATE
+AND lpep_dropoff_datetime <= '2019-11-11'::DATE
+
+Answer: 515.89
