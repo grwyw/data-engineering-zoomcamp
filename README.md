@@ -64,9 +64,9 @@ Answer: 35281
 
 Question 4. Longest trip for each day
 
-SELECT MAX(trip_distance)
-FROM public.green_taxi
-WHERE lpep_pickup_datetime > '2019-10-31'::DATE
-AND lpep_dropoff_datetime <= '2019-11-11'::DATE
+SELECT CAST(lpep_dropoff_datetime AS DATE) AS "day", MAX(trip_distance)
+FROM green_taxi
+GROUP BY CAST(lpep_dropoff_datetime AS DATE)
+ORDER BY 2 DESC
 
-Answer: 515.89
+Answer: 2019-10-11
